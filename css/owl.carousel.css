@@ -69,3 +69,16 @@
   -ms-transform: translate3d(0,0,0);
 }
 
+.owl-carousel .item {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+@media (max-width: 768px) {
+    .owl-carousel .item {
+        height: 70vh;
+    }
+}
