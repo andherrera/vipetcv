@@ -290,6 +290,62 @@ font-size: 18px;font-weight: 500;}
     /* background: rgba(0, 0, 0, 0.18); */
     z-index: 1;
 }
+
+/* Ajustes generales para la versión móvil */
+@media (max-width: 768px) {
+  #main-slider .item {
+      height: 400px; /* Ajusta la altura para dispositivos móviles */
+      background-position: center center; /* Centra la imagen */
+      background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+      background-repeat: no-repeat;
+      position: relative;
+  }
+
+  #main-slider .slider-inner {
+      display: flex; /* Utiliza Flexbox */
+      justify-content: flex-start; /* Mueve el contenido hacia la izquierda */
+      align-items: center; /* Centra el contenido verticalmente */
+      text-align: left; /* Alinea el texto a la izquierda */
+      padding-left: 20px; /* Añade un espacio a la izquierda para dar margen */
+      height: 100%; /* Asegura que ocupe todo el alto del contenedor */
+  }
+
+  #main-slider .carousel-content {
+      max-width: 80%; /* Limita el ancho del contenido */
+      margin: 0; /* Elimina el centrado automático */
+      padding: 10px; /* Ajusta el relleno para dar espacio al contenido */
+      text-align: left; /* Alinea el texto a la izquierda */
+  }
+
+  #main-slider .slider-inner h2 {
+      font-size: 20px; /* Ajusta el tamaño de fuente */
+      line-height: 26px; /* Ajusta el espacio entre líneas */
+      margin: 0 0 15px; /* Ajusta los márgenes */
+  }
+
+  #main-slider .slider-inner p {
+      font-size: 14px; /* Ajusta el tamaño de fuente para el párrafo */
+      line-height: 22px; /* Ajusta el espacio entre líneas */
+  }
+
+  #main-slider .container {
+      width: 100%; /* Asegura que la caja ocupe todo el ancho disponible */
+  }
+
+  #main-slider .owl-prev,
+  #main-slider .owl-next {
+      top: 85%; /* Mueve las flechas de navegación más abajo para mejorar el diseño en móviles */
+      height: 50px; /* Reduce el tamaño de las flechas */
+      width: 50px;
+      line-height: 50px;
+      font-size: 20px; /* Reduce el tamaño de la fuente en las flechas */
+  }
+}
+
+
+
+
+
 .menuItem{
 
 }
