@@ -3,6 +3,33 @@
 
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* Scroll lock: plain overflow:hidden on body doesn't reliably stop background
+     scroll/rubber-banding on iOS Safari, so pin body in place instead and restore
+     the scroll position on unlock. Counted so nested locks (e.g. nav + modal) don't
+     unlock each other early. */
+  var scrollLockCount = 0;
+  var savedScrollY = 0;
+  function lockScroll() {
+    if (scrollLockCount === 0) {
+      savedScrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = '-' + savedScrollY + 'px';
+      document.body.style.left = '0';
+      document.body.style.right = '0';
+    }
+    scrollLockCount++;
+  }
+  function unlockScroll() {
+    scrollLockCount = Math.max(0, scrollLockCount - 1);
+    if (scrollLockCount === 0) {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.left = '';
+      document.body.style.right = '';
+      window.scrollTo(0, savedScrollY);
+    }
+  }
+
   /* Header scroll shadow */
   var header = document.getElementById('header');
   function onScroll() {
@@ -22,15 +49,19 @@
   var navToggle = document.getElementById('nav-toggle');
   var navClose = document.getElementById('nav-close');
 
+  var navIsOpen = false;
   function openNav() {
     nav.classList.add('is-open');
     navToggle.setAttribute('aria-expanded', 'true');
-    document.body.style.overflow = 'hidden';
+    lockScroll();
+    navIsOpen = true;
   }
   function closeNav() {
+    if (!navIsOpen) { return; }
     nav.classList.remove('is-open');
     navToggle.setAttribute('aria-expanded', 'false');
-    document.body.style.overflow = '';
+    unlockScroll();
+    navIsOpen = false;
   }
   if (navToggle) {
     navToggle.addEventListener('click', function () {
@@ -107,12 +138,12 @@
     lightboxImg.alt = img.alt;
     lastFocused = document.activeElement;
     lightbox.hidden = false;
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     lightboxClose.focus();
   }
   function closeLightbox() {
     lightbox.hidden = true;
-    document.body.style.overflow = '';
+    unlockScroll();
     if (lastFocused) { lastFocused.focus(); }
   }
   function showRelative(offset) {
@@ -153,12 +184,12 @@
     }
     bookingLastFocused = document.activeElement;
     bookingModal.hidden = false;
-    document.body.style.overflow = 'hidden';
+    lockScroll();
     bookingClose.focus();
   }
   function closeBookingModal() {
     bookingModal.hidden = true;
-    document.body.style.overflow = '';
+    unlockScroll();
     if (bookingLastFocused) { bookingLastFocused.focus(); }
   }
 

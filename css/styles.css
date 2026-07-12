@@ -249,6 +249,9 @@ section[id] {
 .nav-close {
   display: none;
 }
+.mobile-nav-brand {
+  display: none;
+}
 
 .nav-toggle {
   display: none;
@@ -280,22 +283,44 @@ section[id] {
     position: fixed;
     inset: 0;
     top: 0;
-    background: #fff;
+    /* 100vh includes the mobile browser's address bar; on a real phone that leaves the
+       bottom of the menu cut off or scrollable in a way that looks broken. 100svh is the
+       guaranteed-visible viewport regardless of address-bar state. */
+    height: 100vh;
+    background: linear-gradient(165deg, #ffffff 0%, var(--color-primary-light) 100%);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     transform: translateX(100%);
     transition: transform 320ms ease;
     z-index: 950;
+    padding: 32px 24px;
+    overflow-y: auto;
+  }
+  @supports (height: 100svh) {
+    .primary-nav { height: 100svh; }
   }
   .primary-nav.is-open { transform: translateX(0); }
+  .mobile-nav-brand {
+    display: flex;
+    margin-bottom: 28px;
+  }
+  .mobile-nav-brand img { height: 46px; width: auto; }
   .primary-nav ul {
     flex-direction: column;
-    gap: 8px;
+    gap: 4px;
     text-align: center;
+    width: 100%;
+    max-width: 320px;
   }
-  .nav-link { font-size: 20px; padding: 12px 24px; }
-  .nav-cta { margin: 16px 0 0; }
+  .nav-link {
+    display: block;
+    font-size: 19px;
+    padding: 14px 24px;
+  }
+  .nav-cta { margin: 20px 0 0; width: 100%; }
+  .nav-cta .btn { width: 100%; justify-content: center; }
   .nav-close {
     display: grid;
     place-items: center;
@@ -317,11 +342,18 @@ section[id] {
 /* ------------------------------------------------------------------ */
 .hero {
   position: relative;
+  /* Fallback for browsers without svh support */
   min-height: 100vh;
   display: flex;
   align-items: center;
   overflow: hidden;
   color: #fff;
+}
+@supports (min-height: 100svh) {
+  /* 100vh on a real phone is measured with the address bar hidden, so on first load
+     (address bar visible) the hero renders taller than what's actually visible — the
+     CTAs end up just below the fold. 100svh is the guaranteed-visible height. */
+  .hero { min-height: 100svh; }
 }
 .hero-media {
   position: absolute;
@@ -337,11 +369,14 @@ section[id] {
   opacity: 0;
   animation: heroCrossfade 16s infinite;
 }
-.hero-slide:nth-child(1) { animation-delay: 0s; }
+/* Named classes, not :nth-child — each img now lives inside its own <picture> (for the
+   mobile art-directed crop), so both would otherwise match :nth-child(2) (source is
+   always child 1) and end up on the exact same timing, hiding together. */
+.hero-slide-1 { animation-delay: 0s; }
 /* Negative delay = start already 8s into the cycle, immediately — a positive delay would
    instead leave this slide frozen at opacity 0 for 8s while the other fades out, causing
    a moment where both are hidden (the grey flash). */
-.hero-slide:nth-child(2) { animation-delay: -8s; }
+.hero-slide-2 { animation-delay: -8s; }
 /* Symmetric around the midpoint (opacity(x + 50%) = 1 - opacity(x)) so that with the two
    slides offset by exactly half the cycle, one is always fading in while the other fades
    out in lock-step — combined opacity never dips, so there's no grey "both slides hidden" flash. */
@@ -407,7 +442,7 @@ section[id] {
 
 @media (prefers-reduced-motion: reduce) {
   .hero-slide { animation: none; opacity: 0; }
-  .hero-slide:first-child { opacity: 1; }
+  .hero-slide-1 { opacity: 1; }
 }
 
 /* ------------------------------------------------------------------ */
@@ -925,4 +960,13 @@ section[id] {
   .modal-panel iframe { height: 1900px; }
   .modal { padding: 0; }
   .modal-panel { width: 100%; max-height: 100vh; height: 100%; border-radius: 0; }
+  /* The panel goes edge-to-edge here, so the dark backdrop the close button was designed
+     to sit on is gone — a translucent white circle on a white form is invisible. Solid
+     contrasting style instead. */
+  .modal-close {
+    background: var(--color-bg-alt);
+    color: var(--color-ink);
+    box-shadow: var(--shadow-md);
+  }
+  .modal-close:hover, .modal-close:focus-visible { background: var(--color-border); }
 }

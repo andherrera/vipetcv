@@ -27,6 +27,9 @@
                 <button class="nav-close" id="nav-close" aria-label="Cerrar menú">
                     <i class="fa-solid fa-xmark" aria-hidden="true"></i>
                 </button>
+                <div class="mobile-nav-brand">
+                    <img src="images/web/logo.png" alt="VIPet">
+                </div>
                 <ul>
                     <li><a class="nav-link" data-nav href="#home">Inicio</a></li>
                     <li><a class="nav-link" data-nav href="#about">Quiénes somos</a></li>
@@ -48,8 +51,14 @@
     <main id="main-content">
         <section class="hero" id="home-hero">
             <div class="hero-media" aria-hidden="true">
-                <img class="hero-slide" src="images/web/hero-1.jpg" alt="" fetchpriority="high">
-                <img class="hero-slide" src="images/web/hero-2.jpg" alt="" loading="lazy">
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/web/hero-1-mobile.jpg">
+                    <img class="hero-slide hero-slide-1" src="images/web/hero-1.jpg" alt="" fetchpriority="high">
+                </picture>
+                <picture>
+                    <source media="(max-width: 768px)" srcset="images/web/hero-2-mobile.jpg">
+                    <img class="hero-slide hero-slide-2" src="images/web/hero-2.jpg" alt="" loading="lazy">
+                </picture>
                 <div class="hero-overlay"></div>
             </div>
             <div class="container hero-content">
