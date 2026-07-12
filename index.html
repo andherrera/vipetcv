@@ -1,406 +1,441 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <title>VIPet Clinica Veterinaria 24H</title>
-	<!-- core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet"/>
-               
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/owl.carousel.css" rel="stylesheet">
-    <link href="css/owl.transitions.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet"> 
-    <link rel="shortcut icon" href="images/ico/favicon_io/favicon.ico"> 
-</head> 
+    <meta name="description" content="VIPet Clínica Veterinaria 24H en Bogotá: consulta, cirugía, vacunación, urgencias, baño y peluquería, y más. Atención con amor, los 7 días de la semana.">
+    <title>VIPet Clínica Veterinaria 24H — Bogotá</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    <link rel="shortcut icon" href="images/ico/favicon_io/favicon.ico">
+</head>
 
 <body id="home">
+    <a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 
-    <header id="header">
-        <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"><img src="images/logo_original_50_1_50.png" alt="logo"></a>
+    <header class="site-header" id="header">
+        <div class="container header-inner">
+            <a class="brand" href="#home">
+                <img src="images/web/logo.png" alt="VIPet Clínica Veterinaria">
+            </a>
+
+            <nav class="primary-nav" id="primary-nav" aria-label="Navegación principal">
+                <button class="nav-close" id="nav-close" aria-label="Cerrar menú">
+                    <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+                </button>
+                <ul>
+                    <li><a class="nav-link" data-nav href="#home">Inicio</a></li>
+                    <li><a class="nav-link" data-nav href="#about">Quiénes somos</a></li>
+                    <li><a class="nav-link" data-nav href="#services">Servicios</a></li>
+                    <li><a class="nav-link" data-nav href="#plans">Membresías</a></li>
+                    <li><a class="nav-link" data-nav href="#booking">Agendar cita</a></li>
+                    <li><a class="nav-link" data-nav href="#gallery">Galería</a></li>
+                    <li><a class="nav-link" data-nav href="#contact">Contacto</a></li>
+                    <li class="nav-cta"><a class="btn btn-primary btn-sm" href="tel:+573155251242"><i class="fa-solid fa-phone" aria-hidden="true"></i> Llamar ahora</a></li>
+                </ul>
+            </nav>
+
+            <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="primary-nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="hero" id="home-hero">
+            <div class="hero-media" aria-hidden="true">
+                <img class="hero-slide" src="images/web/hero-1.jpg" alt="" fetchpriority="high">
+                <img class="hero-slide" src="images/web/hero-2.jpg" alt="" loading="lazy">
+                <div class="hero-overlay"></div>
+            </div>
+            <div class="container hero-content">
+                <p class="badge-pill"><i class="fa-solid fa-clock" aria-hidden="true"></i> Urgencias 24/7, los 7 días</p>
+                <h1>Tu mascota es <span>parte de nuestra familia</span></h1>
+                <p class="hero-lead">Consulta, cirugía, laboratorio y urgencias — con el mismo cariño que le darías tú, las 24 horas del día.</p>
+                <div class="hero-actions">
+                    <a class="btn btn-primary" href="tel:+573155251242">
+                        <i class="fa-solid fa-phone" aria-hidden="true"></i> Llamar ahora
+                    </a>
+                    <a class="btn btn-whatsapp" href="https://wa.link/sug10w" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Escríbenos por WhatsApp
+                    </a>
                 </div>
-				
-                <div class="collapse navbar-collapse navbar-right">
-                    <ul class="nav navbar-nav">
-                        <li class="scroll active"><a href="#home">Inicio</a></li> 
-                        <li class="scroll"><a href="#about">Quiénes somos</a></li>
-                        <li class="scroll"><a href="#services">Servicios</a></li>
-                        <li class="scroll"><a href="#contact-us">Contacto</a></li>                        
+            </div>
+        </section>
+
+        <section class="trust-strip">
+            <div class="container trust-grid" data-reveal>
+                <div class="trust-item">
+                    <i class="fa-solid fa-clock" aria-hidden="true"></i>
+                    <span>Atención 24 horas, los 7 días</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-user-doctor" aria-hidden="true"></i>
+                    <span>Equipo veterinario certificado</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i>
+                    <span>Aliados con fundaciones de rescate</span>
+                </div>
+                <div class="trust-item">
+                    <i class="fa-solid fa-microscope" aria-hidden="true"></i>
+                    <span>Laboratorio e imágenes diagnósticas</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="about">
+            <div class="container about-grid">
+                <div class="about-media" data-reveal>
+                    <img src="images/web/about.jpg" alt="Veterinaria de VIPet sosteniendo con cariño a un cachorro rescatado" loading="lazy" width="900" height="1200">
+                </div>
+                <div class="about-copy" data-reveal>
+                    <span class="eyebrow">Quiénes somos</span>
+                    <h3>Cuidamos de tus mascotas como si fueran nuestras</h3>
+                    <p>En VIPet entendemos que cada mascota es un miembro más de la familia. Por eso combinamos medicina veterinaria de calidad con atención personalizada, y trabajamos de la mano con fundaciones de rescate para que cada paciente reciba el cuidado que merece.</p>
+                    <p>Nuestro objetivo es que cada visita sea una experiencia cálida y tranquila, tanto para ti como para tu mascota. Te invitamos a conocernos y descubrir por qué VIPet puede ser el aliado de confianza que buscas para su bienestar.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="services">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow">Servicios</span>
+                    <h2 class="section-title">Nuestros servicios</h2>
+                    <p class="section-lead">Ofrecemos diversos servicios para ayudar a tu peludo de 4 patas a vivir su mejor vida.</p>
+                </div>
+                <div class="services-grid" data-reveal>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-hand-holding-heart" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Adopciones</h4>
+                            <p>Facilitamos la conexión entre las personas y las fundaciones para que cada mascota encuentre una familia que le brinde cuidado y cariño.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-scissors" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Baño y peluquería</h4>
+                            <p>Ofrecemos servicios completos de baño y peluquería para tu mascota sin estrés: sin correas, sin prisa. Cuidamos a tu mascota con amor y a su ritmo.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Cirugía</h4>
+                            <p>Contamos con un equipo de expertos para realizar cirugías seguras y efectivas, garantizando el bienestar de tu mascota.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-stethoscope" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Consulta</h4>
+                            <p>Realizamos consultas generales y especializadas para evaluar el estado de salud de tu mascota y proporcionar el mejor tratamiento.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-plane" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Certificados de viaje</h4>
+                            <p>Te ayudamos a obtener los certificados de viaje necesarios para que tu mascota pueda acompañarte en tus aventuras.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-flask" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Exámenes de laboratorio</h4>
+                            <p>Realizamos una amplia gama de exámenes de laboratorio para diagnosticar y tratar enfermedades con precisión.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-camera" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Imágenes diagnósticas</h4>
+                            <p>Utilizamos tecnología de punta para obtener imágenes precisas que nos ayudan en el diagnóstico y tratamiento.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-house" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Guardería</h4>
+                            <p>Ofrecemos un servicio de guardería donde tu mascota podrá estar en libertad para jugar y socializar, vigilada las 24 horas.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-lungs" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Nebulizaciones</h4>
+                            <p>Proporcionamos tratamientos de nebulización para aliviar afecciones respiratorias en tu mascota de manera efectiva.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-tooth" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Profilaxis</h4>
+                            <p>Ofrecemos servicios de profilaxis dental para mantener la salud oral de tu mascota y prevenir enfermedades.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-kit-medical" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Urgencias 24/7</h4>
+                            <p>Brindamos atención de urgencias para tu mascota las 24 horas, con un equipo especializado listo para actuar rápidamente ante cualquier emergencia.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon"><i class="fa-solid fa-syringe" aria-hidden="true"></i></div>
+                        <div>
+                            <h4>Vacunación</h4>
+                            <p>Proporcionamos un calendario completo de vacunación para proteger a tu mascota contra diversas enfermedades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="plans">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow">Membresías VIPet</span>
+                    <h2 class="section-title">Un plan para cada etapa de tu mascota</h2>
+                    <p class="section-lead">Cuidado continuo mes a mes, pensado para cada edad y necesidad. Escríbenos por WhatsApp y te enviamos toda la información.</p>
+                </div>
+                <div class="plans-grid" data-reveal>
+                    <div class="plan-card">
+                        <div class="plan-icon"><i class="fa-solid fa-paw" aria-hidden="true"></i></div>
+                        <h3>Plan Cachorro</h3>
+                        <p>Todo lo que tu cachorro necesita en sus primeros meses de vida.</p>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-icon"><i class="fa-solid fa-shield-heart" aria-hidden="true"></i></div>
+                        <h3>Plan Básico</h3>
+                        <p>Cuidado esencial y preventivo para el día a día de tu mascota.</p>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-icon"><i class="fa-solid fa-star" aria-hidden="true"></i></div>
+                        <h3>Plan Plus</h3>
+                        <p>Un paso más de tranquilidad, con beneficios adicionales para tu mascota.</p>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-icon"><i class="fa-solid fa-crown" aria-hidden="true"></i></div>
+                        <h3>Plan Premium</h3>
+                        <p>La cobertura más completa para quienes buscan lo mejor para su mascota.</p>
+                    </div>
+                    <div class="plan-card">
+                        <div class="plan-icon"><i class="fa-solid fa-heart-pulse" aria-hidden="true"></i></div>
+                        <h3>Plan Senior</h3>
+                        <p>Atención especializada para acompañar a tu mascota en su etapa dorada.</p>
+                    </div>
+                </div>
+                <div class="plans-cta" data-reveal>
+                    <a class="btn btn-whatsapp" href="https://wa.me/573155251242?text=Hola%2C%20quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20las%20membres%C3%ADas%20de%20VIPet" target="_blank" rel="noopener">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i> Solicita más información
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="booking">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow">Agendar cita</span>
+                    <h2 class="section-title">Reserva tu cita en minutos</h2>
+                    <p class="section-lead">Cuéntanos qué necesita tu mascota y te confirmamos por WhatsApp o teléfono lo antes posible.</p>
+                </div>
+                <div class="booking-cta" data-reveal>
+                    <button type="button" class="btn btn-primary" id="booking-open">
+                        <i class="fa-solid fa-calendar-check" aria-hidden="true"></i> Agendar mi cita
+                    </button>
+                    <p class="booking-fallback">¿Prefieres algo más directo? <a href="https://wa.link/sug10w" target="_blank" rel="noopener">Escríbenos por WhatsApp</a> o <a href="tel:+573155251242">llámanos</a>.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="gallery">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow">Galería</span>
+                    <h2 class="section-title">Nuestros pacientes</h2>
+                    <p class="section-lead">Algunos de los peluditos que hemos tenido el gusto de cuidar en VIPet.</p>
+                </div>
+                <div class="gallery-grid" data-reveal>
+                    <button type="button" class="gallery-item" data-lightbox-index="0">
+                        <img src="images/web/gallery-1.jpg" alt="Gatito de ojos azules con collar amarillo, paciente de VIPet" loading="lazy">
+                        <span class="gallery-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
+                    <button type="button" class="gallery-item" data-lightbox-index="1">
+                        <img src="images/web/gallery-2.jpg" alt="Cachorro pastor belga malinois con collar rosado, paciente de VIPet" loading="lazy">
+                        <span class="gallery-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
+                    <button type="button" class="gallery-item" data-lightbox-index="2">
+                        <img src="images/web/gallery-3.jpg" alt="Perro adulto con arnés turquesa, paciente de VIPet" loading="lazy">
+                        <span class="gallery-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
+                    <button type="button" class="gallery-item" data-lightbox-index="3">
+                        <img src="images/web/gallery-4.jpg" alt="Gatito color naranja sentado, paciente de VIPet" loading="lazy">
+                        <span class="gallery-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
+                    <button type="button" class="gallery-item" data-lightbox-index="4">
+                        <img src="images/web/gallery-5.jpg" alt="Gato blanco y negro sobre un sofá, paciente de VIPet" loading="lazy">
+                        <span class="gallery-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
+                    <button type="button" class="gallery-item" data-lightbox-index="5">
+                        <img src="images/web/gallery-6.jpg" alt="Perro blanco tipo akita mirando a la cámara, paciente de VIPet" loading="lazy">
+                        <span class="gallery-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
+                    <button type="button" class="gallery-item" data-lightbox-index="6">
+                        <img src="images/web/gallery-7.jpg" alt="Husky siberiano con correa, paciente de VIPet" loading="lazy">
+                        <span class="gallery-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
+                    <button type="button" class="gallery-item" data-lightbox-index="7">
+                        <img src="images/web/gallery-8.jpg" alt="Dos gatos naranja y blanco descansando juntos, pacientes de VIPet" loading="lazy">
+                        <span class="gallery-icon" aria-hidden="true"><i class="fa-solid fa-magnifying-glass"></i></span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section section-alt" id="contact">
+            <div class="container">
+                <div class="section-header" data-reveal>
+                    <span class="eyebrow">Contacto</span>
+                    <h2 class="section-title">Visítanos o escríbenos</h2>
+                    <p class="section-lead">Estamos para ayudarte a ti y a tu mascota, cualquier día, a cualquier hora.</p>
+                </div>
+
+                <div class="contact-grid" data-reveal>
+                    <div>
+                        <div class="contact-cards">
+                            <div class="contact-card">
+                                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Dirección</h4>
+                                    <p>Carrera 67 #96-61, Barrios Unidos, 111211<br>Bogotá, Colombia</p>
+                                </div>
+                            </div>
+                            <div class="contact-card">
+                                <i class="fa-solid fa-mobile-screen" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Celular</h4>
+                                    <a href="tel:+573155251242">(+57) 315 5251242</a>
+                                </div>
+                            </div>
+                            <div class="contact-card">
+                                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+                                <div>
+                                    <h4>Teléfono fijo</h4>
+                                    <a href="tel:+576017067276">601 7067276</a>
+                                </div>
+                            </div>
+                            <div class="contact-card">
+                                <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <a href="https://wa.link/sug10w" target="_blank" rel="noopener">Escríbenos directamente</a>
+                                </div>
+                            </div>
+                        </div>
+                        <p class="hours-note"><i class="fa-solid fa-clock" aria-hidden="true"></i> Abiertos 24 horas, los 7 días de la semana</p>
+                    </div>
+
+                    <div>
+                        <div class="map-frame">
+                            <iframe
+                                src="https://www.google.com/maps?q=4.6877566,-74.0719271&z=16&output=embed"
+                                title="Ubicación de VIPet Clínica Veterinaria en el mapa"
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                allowfullscreen>
+                            </iframe>
+                        </div>
+                        <a class="map-directions" href="https://www.google.com/maps/place/VIPet+Clinica+Veterinaria/@4.6877566,-74.0719271,17z/data=!4m14!1m7!3m6!1s0x8e3f9b6a7b65f60f:0x98da6810a53e3707!2sVIPet+Clinica+Veterinaria!8m2!3d4.6877566!4d-74.0719271!16s%2Fg%2F11td34npt8!3m5!1s0x8e3f9b6a7b65f60f:0x98da6810a53e3707!8m2!3d4.6877566!4d-74.0719271!16s%2Fg%2F11td34npt8?entry=ttu" target="_blank" rel="noopener">
+                            <i class="fa-solid fa-diamond-turn-right" aria-hidden="true"></i> Cómo llegar
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer" id="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-brand">
+                        <img src="images/web/logo.png" alt="">
+                    </div>
+                    <p>Clínica veterinaria 24 horas en Bogotá, comprometida con el bienestar de cada mascota y aliada de fundaciones de rescate.</p>
+                    <div class="footer-social">
+                        <a href="https://wa.link/sug10w" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/vipet.cv/" target="_blank" rel="noopener" aria-label="Síguenos en Instagram"><i class="fa-brands fa-instagram" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Navegación</h5>
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#about">Quiénes somos</a></li>
+                        <li><a href="#services">Servicios</a></li>
+                        <li><a href="#plans">Membresías</a></li>
+                        <li><a href="#booking">Agendar cita</a></li>
+                        <li><a href="#gallery">Galería</a></li>
+                        <li><a href="#contact">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Contacto</h5>
+                    <ul>
+                        <li><a href="tel:+573155251242">(+57) 315 5251242</a></li>
+                        <li><a href="tel:+576017067276">601 7067276</a></li>
+                        <li><p>Carrera 67 #96-61, Bogotá</p></li>
+                        <li><p>Atención 24/7, los 7 días</p></li>
                     </ul>
                 </div>
             </div>
-        </nav>
-    </header>
-
-    <section id="main-slider">
-        <div class="owl-carousel">
-            <div class="item" style="background-image: url(images/IMG_119.png);">
-                <div class="slider-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="carousel-content">
-                                    <h2><span>Tu mascota</span> es<br>parte de nuestra familia</h2>
-                                    <p>Atención veterinaria excepcional:<br>Tu confianza
-                                        es nuestra dedicación</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.item-->
-             <div class="item" style="background-image: url(images/IMG_1199.png);">
-                <div class="slider-inner">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <div class="carousel-content">
-                                    <h2><span>24/7</span> Cuidado de<br>Mascotas</h2>
-                                    <p>Dedicados a la salud y felicidad<br>de cada peludito, día y noche.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div><!--/.item-->
-        </div><!--/.owl-carousel-->
-    </section><!--/#main-slider-->
-    <section id="hero-text" class="wow fadeIn">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-9">
-                    <h2>Comprometidos con el bienestar de cada mascota</h2>
-                    <p>En VIPet, nos dedicamos a asegurar que cada mascota reciba el cuidado y el amor que merece. Colaboramos con diversas organizaciones para brindar una atención veterinaria personalizada y compasiva, combinada con un profundo cariño por cada uno de nuestros pacientes.</p>
-                </div>
+            <div class="footer-bottom">
+                <span>&copy; <span id="footer-year">2026</span> VIPet Clínica Veterinaria. Todos los derechos reservados.</span>
+                <span>Hecho con cuidado para nuestros pacientes de 4 patas.</span>
             </div>
         </div>
-    </section>
-    <section id="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Quiénes somos</h2>
-                <h4 class="media-heading text-center wow fadeInDown">Clinica Veterinaria VIPet!</h4>
-            </div>
-            <div class="row">
-                <div class="col-sm-6 wow fadeInLeft">
-                    <img class="img-responsive" src="images/IMG_3761.png" alt="">
-                </div>
-                <div class="col-sm-6 wow fadeInRight">
-                    <h3 class="column-title">Nosotros Cuidamos de tus Mascotas</h3>
-                    <p>En VIPet, entendemos que cada mascota es un miembro muy importante de la familia. Somos una clínica veterinaria que se esfuerza por ofrecer una atención personalizada y una combinación única de medicina veterinaria y amor para cada uno de nuestros pacientes.</p>
-                    <p>Nuestra dedicación va más allá del tratamiento médico. Trabajamos estrechamente con diversas fundaciones para asegurar que cada mascota reciba el cuidado y el cariño que merece. Nuestro enfoque está en crear un ambiente cálido y acogedor para ti y tu mascota, donde cada visita sea una experiencia positiva.</p>
-                    <p>Ven y descubre cómo VIPet puede convertirse en tu aliado confiable para el bienestar de tu mascota. Estamos comprometidos con el cuidado excepcional y la atención personalizada, porque sabemos que cada peludito es único y especial.</p>
-                    <!-- <a class="btn btn-primary" href="#">Aprende Más</a> -->
-                </div>
-            </div>
+    </footer>
+
+    <div class="float-actions">
+        <a class="float-btn float-whatsapp" href="https://wa.link/sug10w" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+            <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+        </a>
+        <a class="float-btn float-instagram" href="https://www.instagram.com/vipet.cv/" target="_blank" rel="noopener" aria-label="Síguenos en Instagram">
+            <i class="fa-brands fa-instagram" aria-hidden="true"></i>
+        </a>
+    </div>
+
+    <div class="lightbox" id="lightbox" hidden role="dialog" aria-modal="true" aria-label="Vista ampliada de la imagen">
+        <button type="button" class="lightbox-close" id="lightbox-close" aria-label="Cerrar"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <button type="button" class="lightbox-prev" id="lightbox-prev" aria-label="Imagen anterior"><i class="fa-solid fa-chevron-left" aria-hidden="true"></i></button>
+        <figure class="lightbox-figure">
+            <img class="lightbox-img" id="lightbox-img" src="" alt="">
+        </figure>
+        <button type="button" class="lightbox-next" id="lightbox-next" aria-label="Imagen siguiente"><i class="fa-solid fa-chevron-right" aria-hidden="true"></i></button>
+    </div>
+
+    <div class="modal" id="booking-modal" hidden role="dialog" aria-modal="true" aria-label="Formulario para agendar cita">
+        <button type="button" class="modal-close" id="booking-modal-close" aria-label="Cerrar"><i class="fa-solid fa-xmark" aria-hidden="true"></i></button>
+        <div class="modal-panel">
+            <iframe id="booking-iframe" data-src="https://docs.google.com/forms/d/e/1FAIpQLSduASmviq_aGTT0bFjWOqPwju_6kTW8CI7huIrUrqYyySVoxA/viewform?embedded=true" title="Formulario para agendar cita en VIPet" loading="lazy"></iframe>
         </div>
-    </section><!--/#about-->
+    </div>
 
-    <section id="services" >
-        <div class="container">
-
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Nuestros servicios</h2>
-                <p class="text-center wow fadeInDown">Ofrecemos diversos servicios para ayudar a tu peludo de 4 patas a vivir su mejor vida.</p>
-            </div>
-
-            <div class="row">
-                <div class="features">
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-hand-holding-heart"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Adopciones</h4>
-                                <p>Facilitamos la conexion entre las personas y las fundaciones para que cada mascota encuentre una familia que le brinde cuidado y cariño.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-scissors"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Baño y Peluqueria</h4>
-                                <p>Ofrecemos servicios completos de baño y peluquería para tu mascota sin estres: sin correas, sin prisa. Cuidamos a tu mascota con amor y a su ritmo.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-            
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="400ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-heartbeat"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Cirugia</h4>
-                                <p>Contamos con un equipo de expertos para realizar cirugías seguras y efectivas, garantizando el bienestar de tu mascota.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-            
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="0ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-stethoscope"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Consulta</h4>
-                                <p>Realizamos consultas generales y especializadas para evaluar el estado de salud de tu mascota y proporcionar el mejor tratamiento.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-            
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-plane"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Certificados de viaje</h4>
-                                <p>Te ayudamos a obtener los certificados de viaje necesarios para que tu mascota pueda acompañarte en tus aventuras.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-            
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="200ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-flask"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Examenes de Laboratorio</h4>
-                                <p>Realizamos una amplia gama de exámenes de laboratorio para diagnosticar y tratar enfermedades con precisión.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-            
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-camera"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Imagenes Diagnosticas</h4>
-                                <p>Utilizamos tecnología de punta para obtener imágenes precisas que nos ayudan en el diagnóstico y tratamiento.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="300ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-home"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Guardería</h4>
-                                <p>Ofrecemos un servicio de guardería donde tu mascota podra estar en libertad para jugar y socializar vigilado las 24 horas.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-            
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-mask-ventilator"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Nebulizaciones</h4>
-                                <p>Proporcionamos tratamientos de nebulización para aliviar afecciones respiratorias en tu mascota de manera efectiva.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-            
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="500ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-teeth"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Profilaxis</h4>
-                                <p>Ofrecemos servicios de profilaxis dental para mantener la salud oral de tu mascota y prevenir enfermedades.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-medkit"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Urgencias 24/7</h4>
-                                <p>Brindamos atención de urgencias para tu mascota las 24 horas, con un equipo especializado listo para actuar rápidamente ante cualquier emergencia</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-            
-                    <div class="col-md-4 col-sm-6 wow fadeInUp" data-wow-duration="300ms" data-wow-delay="100ms">
-                        <div class="media service-box">
-                            <div class="pull-left">
-                                <i class="fa fa-syringe"></i>
-                            </div>
-                            <div class="media-body">
-                                <h4 class="media-heading">Vacunacion</h4>
-                                <p>Proporcionamos un calendario completo de vacunación para proteger a tu mascota contra diversas enfermedades.</p>
-                            </div>
-                        </div>
-                    </div><!--/.col-md-4-->
-                </div>
-            </div><!--/.row-->    
-        </div><!--/.container-->
-    </section><!--/#services-->
-  <section id="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Galeria</h2> 
-            </div>
-
-            <div class="text-center" style="display:none">
-                <ul class="portfolio-filter">
-                    <li><a class="active" href="#" data-filter="*">All Works</a></li>
-                    <li><a href="#" data-filter=".designing">Coffee</a></li>
-                    <li><a href="#" data-filter=".mobile">Snacks</a></li>
-                    <li><a href="#" data-filter=".development">Continental</a></li>
-                </ul>
-            </div> 
-
-            <div class="portfolio-items">
-                <div class="portfolio-item designing">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/IMG_1290.png" alt="">
-                        <div class="portfolio-info">
-                             
-                            <a class="preview" href="images/IMG_1290.png" rel="prettyPhoto"><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item mobile development">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/IMG_2689.png" alt="">
-                        <div class="portfolio-info">
-                             
-                            <a class="preview" href="images/IMG_2689.png" rel="prettyPhoto"><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item designing">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/IMG_2712.png" alt="">
-                        <div class="portfolio-info">
-                             
-                            <a class="preview" href="images/IMG_2712.png" rel="prettyPhoto"><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item mobile">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/Photoroom_20240810_170058.png" alt="">
-                        <div class="portfolio-info">
-                             
-                            <a class="preview" href="images/Photoroom_20240810_170058.png" rel="prettyPhoto"><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item designing development">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/IMG_1278.png" alt="">
-                        <div class="portfolio-info">
-                             
-                            <a class="preview" href="images/IMG_1278.png" rel="prettyPhoto"><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item mobile">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/IMG_2615.png" alt="">
-                        <div class="portfolio-info">
-                             
-                            <a class="preview" href="images/IMG_2615.png" rel="prettyPhoto"><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item designing development">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/IMG_2649.png" alt="">
-                        <div class="portfolio-info">
-                             
-                            <a class="preview" href="images/IMG_2649.png" rel="prettyPhoto"><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="portfolio-item mobile">
-                    <div class="portfolio-item-inner">
-                        <img class="img-responsive" src="images/11.png" alt="">
-                        <div class="portfolio-info">
-                             
-                            <a class="preview" href="images/11.png" rel="prettyPhoto"><i class="fa fa-search"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!--/.container-->
-    </section>
-    <!--/#portfolio-->
-    <section id="contact-us">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title text-center wow fadeInDown">Contacto</h2>
-                <address class="text-center wow fadeInDown">
-                    Carrera 67 #96-61, Barrios Unidos, 111211<br>
-                    Bogotá, Colombia<br>
-                    <abbr title="Celular">Celular:</abbr> (+57) 315 5251242<br>
-                    <abbr title="Fijo">Telefono Fijo:</abbr> 601 7067276
-                </address>
-            </div>
-        </div>
-    </section>
-    <a href="https://www.google.com/maps/place/VIPet+Clinica+Veterinaria/@4.6889476,-74.0741166,17z/data=!3m1!4b1!4m6!3m5!1s0x8e3f9b6a7b65f60f:0x98da6810a53e3707!8m2!3d4.6889423!4d-74.0715417!16s%2Fg%2F11td34npt8?entry=ttu" class="float-map" target="_blank">
-        <i class="fa fa-map-marker-alt my-float-map"></i>
-    </a>
-    <a href="https://wa.link/sug10w" class="float" target="_blank">
-      <i class="fab fa-whatsapp my-float"></i>
-    </a>
-    <a href="https://www.instagram.com/vipet.cv/" class="float-instagram" target="_blank">
-        <i class="fab fa-instagram my-float-instagram"></i>
-    </a>
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/mousescroll.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.inview.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/custom-scripts.js"></script>
+    <script src="js/main.js" defer></script>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-K688CC8FT3"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-
         gtag('config', 'G-K688CC8FT3');
     </script>
 </body>
