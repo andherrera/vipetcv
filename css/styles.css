@@ -355,6 +355,17 @@ section[id] {
      CTAs end up just below the fold. 100svh is the guaranteed-visible height. */
   .hero { min-height: 100svh; }
 }
+@media (max-width: 768px) {
+  /* object-fit:cover zooms in proportionally to how tall the container is relative to the
+     portrait photo crop — a full-screen-height hero forces a tight zoom on a landscape
+     source photo. Backing off the height here reveals meaningfully more of each photo. */
+  .hero { min-height: 88vh; }
+}
+@supports (min-height: 88svh) {
+  @media (max-width: 768px) {
+    .hero { min-height: 88svh; }
+  }
+}
 .hero-media {
   position: absolute;
   inset: 0;
@@ -393,8 +404,8 @@ section[id] {
   /* Vertical scrim keeps the headline/buttons legible regardless of slide; the horizontal
      scrim is now weighted to the right so the top-left corner (logo) shows more of the photo. */
   background:
-    linear-gradient(0deg, rgba(4, 16, 21, 0.8) 0%, rgba(4, 16, 21, 0.5) 38%, rgba(4, 16, 21, 0.18) 62%, rgba(4, 16, 21, 0) 85%),
-    linear-gradient(to left, rgba(4, 16, 21, 0.6) 0%, rgba(4, 16, 21, 0.26) 45%, rgba(4, 16, 21, 0.02) 100%);
+    linear-gradient(0deg, rgba(4, 48, 58, 0.8) 0%, rgba(4, 48, 58, 0.5) 38%, rgba(4, 48, 58, 0.18) 62%, rgba(4, 48, 58, 0) 85%),
+    linear-gradient(to left, rgba(4, 48, 58, 0.6) 0%, rgba(4, 48, 58, 0.26) 45%, rgba(4, 48, 58, 0.02) 100%);
 }
 .hero-content {
   position: relative;
@@ -424,7 +435,7 @@ section[id] {
   margin-bottom: 18px;
   /* Contrast floor independent of overlay/blend state: WCAG needs 3:1 for large text,
      this double shadow (tight + soft) comfortably clears it against any photo. */
-  text-shadow: 0 1px 2px rgba(4, 16, 21, 0.7), 0 6px 24px rgba(4, 16, 21, 0.45);
+  text-shadow: 0 1px 2px rgba(4, 48, 58, 0.7), 0 6px 24px rgba(4, 48, 58, 0.45);
 }
 .hero h1 span { color: #7FE0F0; }
 .hero-lead {
@@ -432,7 +443,7 @@ section[id] {
   color: rgba(255, 255, 255, 0.92);
   margin-bottom: 32px;
   max-width: 540px;
-  text-shadow: 0 1px 2px rgba(4, 16, 21, 0.65), 0 4px 18px rgba(4, 16, 21, 0.4);
+  text-shadow: 0 1px 2px rgba(4, 48, 58, 0.65), 0 4px 18px rgba(4, 48, 58, 0.4);
 }
 .hero-actions {
   display: flex;
@@ -908,6 +919,15 @@ section[id] {
   z-index: 500;
   display: grid;
   gap: 14px;
+  transition: opacity 250ms ease, transform 250ms ease;
+}
+/* The hero already has its own prominent call/WhatsApp CTAs — showing these floating
+   duplicates on top of it is redundant, and on short mobile heroes they can visually
+   collide with the hero's own button row. Fade them in only once scrolled past the hero. */
+.float-actions.is-hidden {
+  opacity: 0;
+  transform: translateY(12px);
+  pointer-events: none;
 }
 .float-btn {
   width: 56px;

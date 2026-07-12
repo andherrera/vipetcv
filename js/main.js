@@ -44,6 +44,18 @@
     onScroll();
   }
 
+  /* Float actions: hidden while the hero (with its own call/WhatsApp CTAs) is in view */
+  var floatActions = document.querySelector('.float-actions');
+  var heroEl = document.querySelector('.hero');
+  function onScrollFloatActions() {
+    var pastHero = heroEl.getBoundingClientRect().bottom <= 0;
+    floatActions.classList.toggle('is-hidden', !pastHero);
+  }
+  if (floatActions && heroEl) {
+    window.addEventListener('scroll', onScrollFloatActions, { passive: true });
+    onScrollFloatActions();
+  }
+
   /* Mobile nav */
   var nav = document.getElementById('primary-nav');
   var navToggle = document.getElementById('nav-toggle');
